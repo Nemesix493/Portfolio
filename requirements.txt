@@ -1,0 +1,4 @@
+Django>=4.2,<4.3
+wagtail>=5.1,<5.2
+dj-database-url>=2.1,<2.2
+psycopg2>=2.9,<2.10
