@@ -17,8 +17,6 @@ services:
       - ENV=PRODUCTION_TEST
       - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@portfolio_postgresql:5432/${POSTGRES_DB}
       - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
-    ports:
-      - "8000:8000"
     volumes:
       - media:/app/media/
       - static:/app/static/
@@ -61,7 +59,7 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ./volumes/nginx/
+      device: ./nginx_conf/
   nginx_log:
     driver: local
     driver_opts:
