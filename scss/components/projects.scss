@@ -1,0 +1,43 @@
+.project-thumbnail{
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: ease-in-out .15s;
+    h3{
+        font-size: x-large;
+        font-weight: 500;
+        color: rgba($title_2_color, .7);
+        font-family: $font_source_code;
+        margin-bottom: 10px;
+    }
+    p{
+        color: rgba(#fff, .5);
+        font-family: $font_inter;
+    }
+    .techno{
+        display: inline-block;
+        background-color: rgba(darken(desaturate($blue, 25), 35), .2);
+        padding: 5px 10px;
+        margin: 10px 5px 0px 0px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: $font_inter;
+        font-weight: 800;
+        color: $title_2_color;
+    }
+    &:hover{
+        background-color: rgba(#fff, .1);
+        transform: scale(1.05);
+        border: .2px outset rgba(#fff, .1);
+        h3{
+            color: $title_2_color;
+        }
+        p{
+            color: rgba(#fff, .8);
+        }
+        .techno{
+            background-color: rgba(darken(desaturate($blue, 25), 35), .6);
+            box-shadow: 2px 2px 2px rgba(darken(desaturate($pink, 25), 40), .6);
+        }
+    }
+}
