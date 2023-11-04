@@ -1,0 +1,10 @@
+{% load project_extras %}
+<a href="#" class="{{base_class}} project-thumbnail">
+    <h3>{{ project.name|project_thumbnail_title }}</h3>
+    <p>
+        {{project.description}}
+    </p>
+    {% for techno in project.technologies.all %}
+        <div class="techno">{{techno.name}}</div>
+    {% endfor %}
+</a>
