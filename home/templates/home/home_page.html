@@ -1,13 +1,7 @@
 {% extends 'base/base.html' %}
 {% block content %}
 <main class="main main--home-page">
-    <section class="main--home-page__section presentation">
-        <h1>Kevin Verquerre</h1>
-        <h2>Developper Back-End</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae odio id suscipit, repellat est voluptate perspiciatis omnis, consectetur nobis tempora doloremque sit dolore voluptatem harum, quod expedita. Asperiores, perspiciatis inventore!
-        </p>
-    </section>
+    {% include 'home/description.html' with base_class='main--home-page__section' %}
     <section class="main--home-page__section project-list">
         {% for project in projects %}
             {% include 'project/project_thumbnail.html' with project=project base_class='project-list__item' %}
