@@ -65,6 +65,26 @@ a {
   box-shadow: 2px 2px 2px rgba(26, 4, 27, 0.6);
 }
 
+.presentation {
+  color: #5EDB92;
+  font-family: "Inter", sans-serif;
+}
+.presentation h1 {
+  font-size: xx-large;
+  font-weight: 800;
+  color: #ecedfe;
+  line-height: 200%;
+}
+.presentation h2 {
+  font-size: x-large;
+  line-height: 200%;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+.presentation p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .header {
   background: linear-gradient(#0e0f2a 0 50%, rgba(14, 15, 42, 0.75) 75%, rgba(14, 15, 42, 0) 100%);
   top: 0;
@@ -100,10 +120,68 @@ a {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-around;
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .main--home-page {
+    justify-content: space-around;
+  }
 }
 .main--home-page__section {
   width: 25vw;
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page__section {
+    margin-bottom: 20px;
+  }
+  .main--home-page__section:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page__section {
+    margin-bottom: 20px;
+  }
+  .main--home-page__section:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page__section {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page__section {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page__section.presentation {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page__section.presentation {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .main--home-page__section.presentation {
+    top: 10vh;
+    position: sticky;
+  }
 }
 
 .project-list {
@@ -114,27 +192,13 @@ a {
 .project-list__item {
   width: 80%;
 }
-
-.presentation {
-  color: #5EDB92;
-  top: 10vh;
-  position: sticky;
-  font-family: "Inter", sans-serif;
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .project-list__item {
+    width: 90%;
+  }
 }
-.presentation h1 {
-  font-size: xx-large;
-  font-weight: 800;
-  color: #ecedfe;
-  line-height: 200%;
+@media screen and (max-width: 699px) {
+  .project-list__item {
+    width: 90%;
+  }
 }
-.presentation h2 {
-  font-size: x-large;
-  line-height: 200%;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
-}
-.presentation p {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-/*# sourceMappingURL=main.css.map */

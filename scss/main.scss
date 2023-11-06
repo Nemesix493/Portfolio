@@ -1,9 +1,11 @@
 @import "./utils/colors.scss";
 @import "./utils/fonts.scss";
+@import "./utils/responsive.scss";
 
 @import "./base/base.scss";
 
 @import "./components/projects.scss";
+@import "./components/presentation.scss";
 
 @import "./layouts/header.scss";
 
