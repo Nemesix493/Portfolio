@@ -9,6 +9,9 @@
         </p>
     </section>
     <section class="main--home-page__section project-list">
+        {% for project in projects %}
+            {% include 'project/project_thumbnail.html' with project=project base_class='project-list__item' %}
+        {% endfor %}
         <div class="project-list__item project-thumbnail">
             <h3>Project title</h3>
             <p>
