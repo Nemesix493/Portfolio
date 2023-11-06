@@ -2,7 +2,6 @@ from django.contrib import admin
 
 from .models import ProjectLink, Project, Techno
 
-# Register your models here.
 
 @admin.register(Techno)
 class TechnoAdmin(admin.ModelAdmin):

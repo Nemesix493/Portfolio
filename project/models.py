@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class Techno(models.Model):
     name = models.CharField(
@@ -75,7 +74,7 @@ class ProjectLink(models.Model):
         related_name='links',
 
     )
-    name=models.CharField(
+    name = models.CharField(
         max_length=60,
         null=False,
         blank=False
@@ -88,6 +87,6 @@ class ProjectLink(models.Model):
     @property
     def project_name(self):
         return self.project.name
-    
+
     def __str__(self):
         return f'{self.project_name} {self.name}'
