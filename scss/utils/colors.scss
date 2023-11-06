@@ -1,0 +1,13 @@
+$purple: #4400EB;
+$blue: #000AEB;
+$purple_pink: #8F00EB;
+$light_blue: #0054EB;
+$pink: #DC00EB;
+
+
+// Use colors
+
+$background_color: darken(desaturate($blue, 50), 35);
+$title_color: lighten(desaturate($blue, 10), 50);
+$title_2_color: lighten(desaturate($blue, 5), 45);
+$text_color: lighten(desaturate($blue, 10), 40);

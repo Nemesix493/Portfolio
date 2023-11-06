@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #0e0f2a;
+  overflow: scroll;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.main {
+  position: relative;
+  margin: 0px 20vw;
+  width: 60vw;
+}
+
+.project-thumbnail {
+  display: block;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: ease-in-out 0.15s;
+}
+.project-thumbnail h3 {
+  font-size: x-large;
+  font-weight: 500;
+  color: rgba(211, 212, 254, 0.7);
+  font-family: "Source Code Pro", monospace;
+  margin-bottom: 10px;
+}
+.project-thumbnail p {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Inter", sans-serif;
+}
+.project-thumbnail .techno {
+  display: inline-block;
+  background-color: rgba(7, 9, 49, 0.2);
+  padding: 5px 10px;
+  margin: 10px 5px 0px 0px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  color: #d3d4fe;
+}
+.project-thumbnail:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  border: 0.2px outset rgba(255, 255, 255, 0.1);
+}
+.project-thumbnail:hover h3 {
+  color: #d3d4fe;
+}
+.project-thumbnail:hover p {
+  color: rgba(255, 255, 255, 0.8);
+}
+.project-thumbnail:hover .techno {
+  background-color: rgba(7, 9, 49, 0.6);
+  box-shadow: 2px 2px 2px rgba(26, 4, 27, 0.6);
+}
+
+.presentation {
+  color: #5EDB92;
+  font-family: "Inter", sans-serif;
+}
+.presentation h1 {
+  font-size: xx-large;
+  font-weight: 800;
+  color: #ecedfe;
+  line-height: 200%;
+}
+.presentation h2 {
+  font-size: x-large;
+  line-height: 200%;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+.presentation p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header {
+  background: linear-gradient(#0e0f2a 0 50%, rgba(14, 15, 42, 0.75) 75%, rgba(14, 15, 42, 0) 100%);
+  top: 0;
+  position: sticky;
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+}
+.header__nav {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__nav ul {
+  display: flex;
+  flex-direction: row;
+}
+.header__nav ul li {
+  padding: 0 25px;
+  height: 5vh;
+  list-style: none;
+  color: #bcbefb;
+  line-height: 5vh;
+  font-family: "Source Code Pro", monospace;
+}
+.header__nav ul li:hover {
+  color: #ecedfe;
+}
+
+.main--home-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .main--home-page {
+    justify-content: space-around;
+  }
+}
+.main--home-page__section {
+  width: 25vw;
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page__section {
+    margin-bottom: 20px;
+  }
+  .main--home-page__section:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page__section {
+    margin-bottom: 20px;
+  }
+  .main--home-page__section:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page__section {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page__section {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .main--home-page__section.presentation {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main--home-page__section.presentation {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .main--home-page__section.presentation {
+    top: 10vh;
+    position: sticky;
+  }
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-list__item {
+  width: 80%;
+}
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .project-list__item {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 699px) {
+  .project-list__item {
+    width: 90%;
+  }
+}

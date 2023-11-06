@@ -1,0 +1,19 @@
+.presentation{
+    color: #5EDB92;
+    font-family: $font_inter;
+    h1{
+        font-size: xx-large;
+        font-weight: 800;
+        color: $title_color;
+        line-height: 200%;
+    }
+    h2{
+        font-size: x-large;
+        line-height: 200%;
+        font-weight: 500;
+        color: rgba(#fff, .7);
+    }
+    p{
+        color: rgba(#fff, .5);
+    }
+}

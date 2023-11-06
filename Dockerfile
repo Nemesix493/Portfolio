@@ -60,4 +60,4 @@ ENV ENV=DEV
 #   PRACTICE. The database should be migrated manually or using the release
 #   phase facilities of your hosting platform. This is used only so the
 #   Django instance can be started with a simple "docker run" command.
-CMD set -xe; sleep 10; python manage.py migrate --noinput; gunicorn --bind 0.0.0.0:${PORT} portfolio.wsgi:application
+CMD set -xe; sleep 10; python manage.py migrate --noinput; python manage.py init_admin_user; gunicorn --bind 0.0.0.0:${PORT} portfolio.wsgi:application

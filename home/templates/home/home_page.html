@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<main class="main main--home-page">
+    {% include 'home/description.html' with base_class='main--home-page__section' %}
+    <section class="main--home-page__section project-list">
+        {% for project in projects %}
+            {% include 'project/project_thumbnail.html' with project=project base_class='project-list__item' %}
+        {% endfor %}
+    </section>
+</main>
+{% endblock %}

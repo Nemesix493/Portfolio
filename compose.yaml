@@ -17,9 +17,18 @@ services:
       - ENV=PRODUCTION_TEST
       - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@portfolio_postgresql:5432/${POSTGRES_DB}
       - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - ADMIN_ID=${ADMIN_ID}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_SLUG=${ADMIN_SLUG}
     volumes:
       - media:/app/media/
       - static:/app/static/
+      # develop volumes
+      - portfolio_app:/app/portfolio/
+      - home_app:/app/home/
+      - templates:/app/templates/
+      - project_app:/app/project/
     networks:
       - my_network
   portfolio-nginx:
@@ -33,7 +42,6 @@ services:
       - nginx_log:/var/log/nginx/logs/
     networks:
       - my_network
-
 
 volumes:
   pgdata:
@@ -66,6 +74,31 @@ volumes:
       type: none
       o: bind
       device: ./volumes/nginx-log/
+  # develop volumes
+  portfolio_app:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./portfolio/
+  home_app:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./home/
+  templates:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./templates/
+  project_app:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./project/
 
 networks:
   my_network:

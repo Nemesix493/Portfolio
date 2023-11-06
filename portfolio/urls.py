@@ -16,20 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 
-import random
-from django.http import Http404, HttpResponse
-
-def home(request):
-    response = HttpResponse()
-    del response['Content-Type']
-    if random.randint(0,1) == 0:
-        response['X-Accel-Redirect'] = '/static_error/404_media.html'
-    else:
-        response['X-Accel-Redirect'] = '/static_error/404_static.html'
-    return response
+from home import views as home_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home)
+    path(f'{settings.ADMIN_SLUG}/', admin.site.urls),
+    path('', home_views.home_page, name='home-page')
 ]
