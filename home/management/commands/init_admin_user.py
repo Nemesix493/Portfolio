@@ -10,14 +10,13 @@ ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', None)
 ADMIN_EMAIL = os.getenv('ADMIN_EMAIL', None)
 
 
-
 class Command(BaseCommand):
 
     help = 'Initialize Admin User'
 
     def handle(self, *args, **options):
         self.stdout.write(self.style.MIGRATE_HEADING(self.help))
-        if not None in [ADMIN_ID, ADMIN_PASSWORD, ADMIN_EMAIL]:
+        if None not in [ADMIN_ID, ADMIN_PASSWORD, ADMIN_EMAIL]:
             try:
                 UserModel.objects.get(username=ADMIN_ID)
             except UserModel.DoesNotExist:

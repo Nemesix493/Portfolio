@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class HomePageDescription(models.Model):
     title = models.CharField(

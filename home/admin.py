@@ -12,6 +12,6 @@ class HomePageDescriptionAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request: HttpRequest) -> bool:
         return False
-    
+
     def has_delete_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return False
