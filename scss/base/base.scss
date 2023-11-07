@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    background-color: $background_color;
+    overflow: scroll;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.main{
+    position: relative;
+    margin: 0px 20vw;
+    width: 60vw;
+}

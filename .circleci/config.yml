@@ -1,0 +1,46 @@
+version: 2.1
+jobs:
+  deploy:
+    machine:
+      image: ubuntu-2004:2023.10.1
+    steps:
+      - checkout
+      # install dependecies to deploy scripts
+      - run: sudo apt install python3
+      - run: curl https://cli-assets.heroku.com/install.sh | sh
+
+      # Deploy to Heroku and migrate
+      - run:
+          name: Deploy to Heroku and migrate
+          command: |
+            python3 -m run_deployement
+  test:
+    machine:
+      image: ubuntu-2004:2023.10.1
+    steps:
+      - checkout
+      - run: sudo apt install python3
+      - run: pip3 install --upgrade pip
+      - run: pip3 install -r test_requirements.txt
+      # - run: pip3 install -r requirements.txt
+      - run: python3 -m flake8
+      # - run: python3 -m manage test
+      
+
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only:
+                - master
+                - develop
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
