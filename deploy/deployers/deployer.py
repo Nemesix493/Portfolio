@@ -29,7 +29,7 @@ class AbstractDeployer(abc.ABC):
     @classmethod
     def run_deployement(cls) -> None:
         deploying_info = cls.get_deploying_info()
-        print(cls.init_message())
+        print(cls.init_message(deploying_info))
         cls.init_deploying(
             deploying_info=deploying_info
         )
