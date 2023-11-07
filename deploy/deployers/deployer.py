@@ -26,6 +26,7 @@ class AbstractDeployer(abc.ABC):
     def success_message() -> str:
         pass
 
+    @classmethod
     def run_deployement(cls) -> None:
         deploying_info = cls.get_deploying_info()
         print(cls.init_message())
